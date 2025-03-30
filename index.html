@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Avanti Sale</title>
+        <link rel="stylesheet" href="./dist/styles.css" />
+
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Script geral -->
+        <script src="../src/script.js" defer></script>
+
+        <!-- Swiper -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="w-full">
+            <!-- Linha Azul do primeiro pedido -->
+            <div class="w-full bg-blueBelt py-1 px-5">
+                <p class="text-sm text-[#fff] font-bold text-center">
+                    Ganhe <span class="bg-[#6220C1]">R$10,00</span> de desconto
+                    no seu primeiro pedido. Utilize o cupom
+                    <span class="font-normal 2xl:italic">DESCONTO10</span>
+                </p>
+            </div>
+
+            <!-- Menu | Logo | Shopping Cart | Search -->
+            <div
+                class="w-full py-5 px-4 grid grid-cols-[auto,1fr,auto] grid-rows-2 2xl:px-96 2xl:flex 2xl:items-center 2xl:justify-between"
+            >
+                <!-- Menu -->
+                <div class="md:hidden cursor-pointer">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </div>
+
+                <!-- Logo -->
+                <div class="place-items-center cursor-pointer">
+                    <img
+                        src="./src/images/Avanti Logo.svg"
+                        alt="Logo Avanti"
+                        id="logo"
+                    />
+                </div>
+
+                <!-- Shopping Cart | User | Somente Visivel em PC -->
+                <div
+                    class="2xl:w-fit 2xl:order-1 2xl:flex 2xl:items-center 2xl:gap-x-6"
+                >
+                    <div
+                        class="hidden 2xl:flex 2xl:items-center cursor-pointer"
+                    >
+                        <i
+                            data-lucide="user"
+                            class="w-6 h-6 text-[#005CFF]"
+                        ></i>
+                        <p
+                            class="text-colorMain text-sm font-semibold w-22 ml-2"
+                        >
+                            Olá, <br />
+                            <span>Nome cliente!</span>
+                        </p>
+                    </div>
+
+                    <div class="relative cursor-pointer">
+                        <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        <p
+                            class="absolute -top-3 -right-2 w-5 h-5 bg-bannerColor text-xs text-[#fff] font-semibold rounded-full flex justify-center items-center"
+                        >
+                            2
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div
+                    class="col-span-3 mt-3 relative 2xl:col-span-1 2xl:w-[50%] 2xl:mt-0"
+                >
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Digite aqui o que você procura"
+                        class="w-full h-10 rounded-md px-5 placeholder:text-colorMain text-sm font-semibold border border-borderColor"
+                    />
+                    <button
+                        class="absolute top-[50%] -translate-y-[50%] right-4"
+                        id="buttonSearch"
+                    >
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navegation Visivel somente para PC -->
+            <nav class="hidden 2xl:flex 2xl:flex-col 2xl:px-96 2xl:gap-x-10">
+                <div class="flex gap-x-6">
+                    <div
+                        class="text-sm text-colorMain font-bold flex items-center cursor-pointer relative"
+                        id="hoverAllCategorias"
+                    >
+                        <i data-lucide="menu" class="w-4 h-4"></i>
+                        Todas as Categorias
+                    </div>
+
+                    <ul
+                        class="flex justify-between items-center text-sm text-colorMain font-normal gap-x-5"
+                    >
+                        <li>
+                            <a href="#" id="linkDepartamento">Departamento</a>
+                        </li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                        <li><a href="#">Departamento</a></li>
+                    </ul>
+                </div>
+
+                <!-- All -->
+                <div class="w-full mt-4 pr-6 hidden" id="divHoverAll">
+                    <div
+                        class="bg-[#F5F5F5] h-72 overflow-y-auto w-48 px-4 py-5 rounded-md"
+                    >
+                        <ul
+                            class="text-sm font-normal text-[#303030] flex flex-col gap-y-3"
+                        >
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between text-colorPromo font-bold"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-between"
+                                    >Departamento
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4"
+                                    ></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full flex justify-between ml-8 pt-5">
+                        <div
+                            class="text-sm font-normal text-[#303030] flex flex-col gap-y-3"
+                        >
+                            <a href="#" class="text-colorPromo font-bold"
+                                >Categoria</a
+                            >
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                        </div>
+
+                        <div
+                            class="text-sm font-normal text-[#303030] flex flex-col gap-y-3"
+                        >
+                            <a href="#" class="text-colorPromo font-bold"
+                                >Categoria</a
+                            >
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                        </div>
+
+                        <div
+                            class="text-sm font-normal text-[#303030] flex flex-col gap-y-3"
+                        >
+                            <a href="#" class="text-colorPromo font-bold"
+                                >Categoria</a
+                            >
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                            <a href="#">Categoria</a>
+                        </div>
+
+                        <div
+                            class="px-7 py-11 w-60 h-72 bg-[url(../src/images/caneca2.png)] bg-cover bg-center rounded-lg relative"
+                        >
+                            <div
+                                class="bg-[#000]/30 absolute inset-0 rounded-lg"
+                            ></div>
+
+                            <div class="relative z-20">
+                                <p
+                                    class="text-2xl font-normal text-[#fff] w-[76%]"
+                                >
+                                    Confira os produtos
+                                    <span class="font-bold"
+                                        >Que acabaram De chegar</span
+                                    >
+                                </p>
+                                <button
+                                    class="text-xs text-[#fff] font-bold uppercase border border-[#fff] rounded-lg py-2 px-6 mt-5"
+                                >
+                                    Ver todos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link Departamento -->
+                <div
+                    class="w-full mt-4 pr-6 hidden flex-col"
+                    id="divOneDepartamento"
+                >
+                    <div>
+                        <p class="text-base text-[#000] font-bold">
+                            Departamento
+                        </p>
+                    </div>
+
+                    <div class="flex justify-between w-full mt-4">
+                        <div>
+                            <ul
+                                class="flex flex-col text-sm text-colorMain font-normal gap-y-5"
+                            >
+                                <a href="#" class="text-colorPromo font-bold"
+                                    >Categoria</a
+                                >
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul
+                                class="flex flex-col text-sm text-colorMain font-normal gap-y-5"
+                            >
+                                <a href="#" class="text-colorPromo font-bold"
+                                    >Categoria</a
+                                >
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul
+                                class="flex flex-col text-sm text-colorMain font-normal gap-y-5"
+                            >
+                                <a href="#" class="text-colorPromo font-bold"
+                                    >Categoria</a
+                                >
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                                <li><a href="#">Departamento</a></li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="px-7 py-11 w-60 h-72 bg-[url(../src/images/caneca2.png)] bg-cover bg-center rounded-lg relative"
+                        >
+                            <div
+                                class="bg-[#000]/30 absolute inset-0 rounded-lg"
+                            ></div>
+
+                            <div class="relative z-20">
+                                <p
+                                    class="text-2xl font-normal text-[#fff] w-[76%]"
+                                >
+                                    Confira os produtos
+                                    <span class="font-bold"
+                                        >Que acabaram De chegar</span
+                                    >
+                                </p>
+                                <button
+                                    class="text-xs text-[#fff] font-bold uppercase border border-[#fff] rounded-lg py-2 px-6 mt-5"
+                                >
+                                    Ver todos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Section Main -->
+        <main class="mt-4 2xl:mt-5" id="main">
+            <section class="2xl:px-96 bg-[#E7E7EA]">
+                <div
+                    class="swiper-container swiperOne overflow-hidden relative bg-[#E7E7EA]"
+                >
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="flex items-center">
+                                <!-- Imagem para Mobile -->
+                                <div class="2xl:hidden">
+                                    <img
+                                        src="./src/images/bannerMobile.png"
+                                        alt="Banner Principal One"
+                                        class="h-72 w-auto"
+                                    />
+                                </div>
+
+                                <!-- Imagem para PC -->
+                                <div class="hidden 2xl:block">
+                                    <img
+                                        src="./src/images/bannerPc.png"
+                                        alt="Banner Principal One"
+                                        class="h-72 w-auto 2xl:h-96"
+                                    />
+                                </div>
+
+                                <div class="flex flex-col">
+                                    <h2
+                                        class="text-colorMain text-4xl font-bold uppercase text-center flex flex-col 2xl:flex-row 2xl:text-8xl"
+                                    >
+                                        SUPER<span class="font-light"
+                                            >SALE</span
+                                        >
+                                    </h2>
+                                    <h3
+                                        class="text-colorPromo text-xs uppercase font-bold text-center 2xl:text-2xl"
+                                    >
+                                        Selected Items Up To
+                                    </h3>
+                                    <h3
+                                        class="text-colorPromo text-3xl uppercase font-bold text-center 2xl:text-6xl"
+                                    >
+                                        50%OFF
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="flex items-center flex-row-reverse">
+                                <img
+                                    src="./src/images/caneca-banner.png"
+                                    alt="Banner Principal One"
+                                    class="w-52 h-72 2xl:w-auto 2xl:h-96"
+                                />
+
+                                <div class="flex flex-col">
+                                    <h2
+                                        class="text-colorMain text-4xl font-bold uppercase text-center flex flex-col 2xl:flex-row 2xl:text-8xl"
+                                    >
+                                        SUPER<span class="font-light"
+                                            >SALE</span
+                                        >
+                                    </h2>
+                                    <h3
+                                        class="text-colorPromo text-xs uppercase font-bold text-center 2xl:text-2xl"
+                                    >
+                                        Selected Items Up To
+                                    </h3>
+                                    <h3
+                                        class="text-colorPromo text-3xl uppercase font-bold text-center 2xl:text-6xl"
+                                    >
+                                        80%OFF
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="flex items-center">
+                                <img
+                                    src="./src/images/caneca-banner2.png"
+                                    alt="Banner Principal One"
+                                    class="h-72 w-52 2xl:w-auto 2xl:h-96"
+                                />
+
+                                <div class="flex flex-col">
+                                    <h2
+                                        class="text-colorMain text-4xl font-bold uppercase text-center flex flex-col 2xl:flex-row 2xl:text-8xl"
+                                    >
+                                        SUPER<span class="font-light"
+                                            >SALE</span
+                                        >
+                                    </h2>
+                                    <h3
+                                        class="text-colorPromo text-xs uppercase font-bold text-center 2xl:text-2xl"
+                                    >
+                                        Selected Items Up To
+                                    </h3>
+                                    <h3
+                                        class="text-colorPromo text-3xl uppercase font-bold text-center 2xl:text-6xl"
+                                    >
+                                        90%OFF
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Setas de navegação -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <!-- Dots de navegação -->
+                    <div class="swiper-pagination absolute top-0"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Section New Releases -->
+        <section class="px-4 mt-14 2xl:px-96" id="newReleases">
+            <div class="flex justify-between items-center mb-4">
+                <p class="text-base text-colorMain font-bold">Lançamentos</p>
+                <a href="#" class="text-sm text-[#303030] font-bold underline"
+                    >Ver mais</a
+                >
+            </div>
+
+            <div
+                class="swiper-container swiperTwo overflow-hidden relative pb-14 2xl:px-14"
+            >
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navegação -->
+                <div class="swiper-button-next swiperTwoRight"></div>
+                <div class="swiper-button-prev swiperTwoLeft"></div>
+
+                <!-- Dots de navegação -->
+                <div class="swiper-pagination absolute bottom-0"></div>
+            </div>
+        </section>
+
+        <!-- Section Cups One -->
+        <section
+            class="pb-9 mt-9 2xl:px-96 2xl:flex 2xl:justify-center 2xl:mt-14"
+            id="cupOne"
+        >
+            <div>
+                <img
+                    src="./src/images/caneca1.png"
+                    alt="Imagem de uma Xicara da Avanti"
+                />
+            </div>
+
+            <div
+                class="px-6 mt-9 flex flex-col gap-y-5 2xl:w-[40%] 2xl:mt-0 2xl:justify-center"
+            >
+                <p class="text-colorMain text-2xl font-bold uppercase">
+                    Lorem Ipsum
+                </p>
+
+                <p class="text-sm font-normal text-colorMain">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                    consequat massa quis enim.
+                </p>
+
+                <p class="text-sm font-normal text-colorMain">
+                    Cras dignissim est et pellentesque tincidunt. Praesent
+                    bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                    iaculis ullamcorper. Curabitur nec metus sed tortor
+                    sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                    tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                    porttitor augue placerat et.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section Cups Two -->
+        <section
+            class="px-5 py-7 bg-[#DEDEDE] 2xl:px-96 2xl:flex 2xl:flex-row-reverse 2xl:justify-center"
+            id="cupTwo"
+        >
+            <div>
+                <img
+                    src="./src/images/caneca2.png"
+                    alt="Imagem de uma Xicara da Avanti"
+                />
+            </div>
+
+            <div
+                class="2xl:w-[40%] 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center"
+            >
+                <p
+                    class="text-colorMain text-2xl font-bold uppercase text-center py-5 2xl:text-[#4F4F4F] 2xl:text-3xl"
+                >
+                    Lorem Ipsum
+                </p>
+
+                <div class="flex flex-col gap-y-5">
+                    <!-- Map Pin One -->
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div
+                                class="bg-bannerColor rounded-full w-14 h-14 flex justify-center items-center"
+                            >
+                                <i
+                                    data-lucide="map-pin"
+                                    class="w-6 h-6 text-[#fff]"
+                                ></i>
+                            </div>
+
+                            <div class="w-[80%]">
+                                <p
+                                    class="text-xs font-normal text-colorMain 2xl:text-[#4F4F4F]"
+                                >
+                                    Aenean massa. Cum sociis natoque penatibus
+                                    et magnis dis parturient montes, nascetur
+                                    ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Pin Two -->
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div
+                                class="bg-bannerColor rounded-full w-14 h-14 flex justify-center items-center"
+                            >
+                                <i
+                                    data-lucide="map-pin"
+                                    class="w-6 h-6 text-[#fff]"
+                                ></i>
+                            </div>
+
+                            <div class="w-[80%]">
+                                <p
+                                    class="text-xs font-normal text-colorMain 2xl:text-[#4F4F4F]"
+                                >
+                                    Aenean massa. Cum sociis natoque penatibus
+                                    et magnis dis parturient montes, nascetur
+                                    ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Pin Three -->
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div
+                                class="bg-bannerColor rounded-full w-14 h-14 flex justify-center items-center"
+                            >
+                                <i
+                                    data-lucide="map-pin"
+                                    class="w-6 h-6 text-[#fff]"
+                                ></i>
+                            </div>
+
+                            <div class="w-[80%]">
+                                <p
+                                    class="text-xs font-normal text-colorMain 2xl:text-[#4F4F4F]"
+                                >
+                                    Aenean massa. Cum sociis natoque penatibus
+                                    et magnis dis parturient montes, nascetur
+                                    ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cups Three -->
+        <section
+            class="pb-9 mt-9 2xl:px-96 2xl:flex 2xl:justify-center 2xl:mt-14"
+            id="cupThree"
+        >
+            <div>
+                <img
+                    src="./src/images/caneca1.png"
+                    alt="Imagem de uma Xicara da Avanti"
+                />
+            </div>
+
+            <div
+                class="px-6 mt-9 flex flex-col gap-y-5 2xl:w-[40%] 2xl:mt-0 2xl:justify-center"
+            >
+                <p class="text-colorMain text-2xl font-bold uppercase">
+                    Lorem Ipsum
+                </p>
+
+                <p class="text-sm font-normal text-colorMain">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                    consequat massa quis enim.
+                </p>
+
+                <p class="text-sm font-normal text-colorMain">
+                    Cras dignissim est et pellentesque tincidunt. Praesent
+                    bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                    iaculis ullamcorper. Curabitur nec metus sed tortor
+                    sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                    tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                    porttitor augue placerat et.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section New Releases Visivel somente para PC -->
+        <section class="hidden 2xl:block mt-14 px-96" id="newReleasesTwo">
+            <div class="flex justify-between items-center mb-4">
+                <p class="text-base text-colorMain font-bold">Lançamentos</p>
+                <a href="#" class="text-sm text-[#303030] font-bold underline"
+                    >Ver mais</a
+                >
+            </div>
+
+            <div
+                class="swiper-container swiperThree overflow-hidden relative pb-14 2xl:px-14"
+            >
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="border border-borderColor px-2 py-3 rounded-md w-44"
+                        >
+                            <p
+                                class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                            >
+                                Novo
+                            </p>
+
+                            <img
+                                src="./src/images/modeloAvanti.png"
+                                alt="Modelo Avanti"
+                            />
+
+                            <h3 class="text-[#303030] text-sm font-normal">
+                                Lorem ipsum dolor sit amet consectetuer
+                                adipiscing elit
+                            </h3>
+                            <div class="flex items-center gap-x-5 mt-3 mb-1">
+                                <div>
+                                    <p
+                                        class="text-xs font-normal text-[#303030] line-through"
+                                    >
+                                        R$ 100,00
+                                    </p>
+                                    <p
+                                        class="text-base text-colorMain font-bold"
+                                    >
+                                        R$79,90
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                                >
+                                    10% OFF
+                                </div>
+                            </div>
+                            <p class="text-[#303030] text-xs font-normal">
+                                Ou em até
+                                <span class="font-bold">10x de R$ 7,90</span>
+                            </p>
+                            <button
+                                class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                            >
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navegação -->
+                <div class="swiper-button-next swiperTwoRight"></div>
+                <div class="swiper-button-prev swiperTwoLeft"></div>
+
+                <!-- Dots de navegação -->
+                <div class="swiper-pagination absolute bottom-0"></div>
+            </div>
+        </section>
+
+        <!-- Section Banner Whatsapp -->
+        <section
+            class="mt-14 flex items-center w-full h-[28rem] bg-[url(../src/images/avantiroom.png)] bg-cover bg-center relative"
+            id="bannerWhatsapp"
+        >
+            <div
+                class="bg-bannerColor text-[#fff] text-base font-semibold py-5 text-center w-full 2xl:text-2xl 2xl:font-normal"
+            >
+                Entre em contato conosco e verifique a disponibilidade para sua
+                região!
+            </div>
+        </section>
+
+        <!-- Section Form -->
+        <section class="px-4 mt-14 2xl:px-96" id="form">
+            <div>
+                <p
+                    class="text-base text-colorMain font-bold text-center mb-4 2xl:text-xl"
+                >
+                    Cadastre-se na nossa
+                    <span class="text-colorPromo">newsletter</span>
+                </p>
+            </div>
+
+            <form
+                action="."
+                class="bg-[#F5F5F5] px-4 py-9 rounded-md 2xl:flex 2xl:items-center 2xl:px-28 2xl:justify-center 2xl:gap-x-6"
+            >
+                <div class="2xl:flex 2xl:items-center 2xl:gap-x-6">
+                    <input
+                        type="text"
+                        placeholder="Digite seu nome"
+                        class="border border-borderColor rounded-md w-full px-6 py-4 text-sm font-normal text-colorMain placeholder:text-sm placeholder:text-colorMain placeholder:font-normal"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Digite seu e-mail"
+                        class="mt-4 border border-borderColor rounded-md w-full px-6 py-4 text-sm font-normal text-colorMain placeholder:text-sm placeholder:text-colorMain placeholder:font-normal 2xl:mt-0"
+                    />
+                </div>
+                <div
+                    class="w-full flex justify-center items-center my-4 2xl:w-fit 2xl:my-0"
+                >
+                    <input type="checkbox" id="policy" />
+                    <label
+                        for="policy"
+                        class="text-xs font-bold text-[#656565] ml-2"
+                    >
+                        Estou de acordo com a
+                        <a href="#" class="underline"
+                            >Política de Privacidade</a
+                        ></label
+                    >
+                </div>
+
+                <div>
+                    <button
+                        class="w-full bg-buttonBack text-[#fff] text-base font-bold py-3 rounded-md 2xl:px-6"
+                    >
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Modal da Pesquisa -->
+        <section
+            class="hidden mt-4 bg-[#f5f5f5] w-screen 2xl:h-screen px-4 pt-10 pb-8 z-[1000] overflow-hidden 2xl:px-96"
+            id="modal"
+        >
+            <div>
+                <p class="text-base text-colorMain font-bold mb-4 2xl:text-xl">
+                    Você buscou por: <span id="searchItem">roupas</span>
+                </p>
+            </div>
+
+            <div
+                class="grid grid-cols-2 grid-rows-2 gap-5 mt-5 2xl:grid-cols-4 2xl:grid-rows-1"
+            >
+                <div
+                    class="border border-borderColor px-2 py-3 rounded-md w-44"
+                >
+                    <p
+                        class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                    >
+                        Novo
+                    </p>
+
+                    <img
+                        src="./src/images/modeloAvanti.png"
+                        alt="Modelo Avanti"
+                    />
+
+                    <h3 class="text-[#303030] text-sm font-normal">
+                        Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+                    <div class="flex items-center gap-x-5 mt-3 mb-1">
+                        <div>
+                            <p
+                                class="text-xs font-normal text-[#303030] line-through"
+                            >
+                                R$ 100,00
+                            </p>
+                            <p class="text-base text-colorMain font-bold">
+                                R$79,90
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                        >
+                            10% OFF
+                        </div>
+                    </div>
+                    <p class="text-[#303030] text-xs font-normal">
+                        Ou em até
+                        <span class="font-bold">10x de R$ 7,90</span>
+                    </p>
+                    <button
+                        class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                    >
+                        Comprar
+                    </button>
+                </div>
+
+                <div
+                    class="border border-borderColor px-2 py-3 rounded-md w-44"
+                >
+                    <p
+                        class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                    >
+                        Novo
+                    </p>
+
+                    <img
+                        src="./src/images/modeloAvanti.png"
+                        alt="Modelo Avanti"
+                    />
+
+                    <h3 class="text-[#303030] text-sm font-normal">
+                        Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+                    <div class="flex items-center gap-x-5 mt-3 mb-1">
+                        <div>
+                            <p
+                                class="text-xs font-normal text-[#303030] line-through"
+                            >
+                                R$ 100,00
+                            </p>
+                            <p class="text-base text-colorMain font-bold">
+                                R$79,90
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                        >
+                            10% OFF
+                        </div>
+                    </div>
+                    <p class="text-[#303030] text-xs font-normal">
+                        Ou em até
+                        <span class="font-bold">10x de R$ 7,90</span>
+                    </p>
+                    <button
+                        class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                    >
+                        Comprar
+                    </button>
+                </div>
+
+                <div
+                    class="border border-borderColor px-2 py-3 rounded-md w-44"
+                >
+                    <p
+                        class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                    >
+                        Novo
+                    </p>
+
+                    <img
+                        src="./src/images/modeloAvanti.png"
+                        alt="Modelo Avanti"
+                    />
+
+                    <h3 class="text-[#303030] text-sm font-normal">
+                        Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+                    <div class="flex items-center gap-x-5 mt-3 mb-1">
+                        <div>
+                            <p
+                                class="text-xs font-normal text-[#303030] line-through"
+                            >
+                                R$ 100,00
+                            </p>
+                            <p class="text-base text-colorMain font-bold">
+                                R$79,90
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                        >
+                            10% OFF
+                        </div>
+                    </div>
+                    <p class="text-[#303030] text-xs font-normal">
+                        Ou em até
+                        <span class="font-bold">10x de R$ 7,90</span>
+                    </p>
+                    <button
+                        class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                    >
+                        Comprar
+                    </button>
+                </div>
+
+                <div
+                    class="border border-borderColor px-2 py-3 rounded-md w-44"
+                >
+                    <p
+                        class="w-fit bg-[#00264E] text-xs text-[#fff] uppercase rounded-md py-[1px] px-1"
+                    >
+                        Novo
+                    </p>
+
+                    <img
+                        src="./src/images/modeloAvanti.png"
+                        alt="Modelo Avanti"
+                    />
+
+                    <h3 class="text-[#303030] text-sm font-normal">
+                        Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+                    <div class="flex items-center gap-x-5 mt-3 mb-1">
+                        <div>
+                            <p
+                                class="text-xs font-normal text-[#303030] line-through"
+                            >
+                                R$ 100,00
+                            </p>
+                            <p class="text-base text-colorMain font-bold">
+                                R$79,90
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#5EC0BE] text-[#fff] text-xs font-bold rounded-md py-1 px-2 w-fit"
+                        >
+                            10% OFF
+                        </div>
+                    </div>
+                    <p class="text-[#303030] text-xs font-normal">
+                        Ou em até
+                        <span class="font-bold">10x de R$ 7,90</span>
+                    </p>
+                    <button
+                        class="bg-buttonBack text-[#fff] text-sm font-bold rounded-md py-2 px-12 mt-2"
+                    >
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#F5F5F5] mt-10 pt-10">
+            <div class="2xl:flex 2xl:px-96">
+                <div
+                    class="bg-[#F5F5F5] flex flex-col items-center py-10 2xl:items-start 2xl:py-0"
+                >
+                    <div>
+                        <img
+                            src="./src/images/Avanti Logo.svg"
+                            alt="Logo da Avanti"
+                        />
+                    </div>
+
+                    <div class="flex items-center mt-10 gap-x-10">
+                        <a href="#"
+                            ><i
+                                data-lucide="instagram"
+                                class="w-6 h-6 text-colorPromo"
+                            ></i
+                        ></a>
+                        <a href="#"
+                            ><i
+                                data-lucide="facebook"
+                                class="w-6 h-6 text-colorPromo"
+                            ></i
+                        ></a>
+                        <a href="#"
+                            ><i
+                                data-lucide="youtube"
+                                class="w-6 h-6 text-colorPromo"
+                            ></i
+                        ></a>
+
+                        <!-- A biblioteca de Icones não tinha o icone do TikTok, coloquei o GitHub no lugar -->
+                        <a href="#"
+                            ><i
+                                data-lucide="github"
+                                class="w-6 h-6 text-colorPromo"
+                            ></i
+                        ></a>
+                    </div>
+                </div>
+
+                <!-- Links Visivel somente no Mobile -->
+                <div class="2xl:hidden">
+                    <div
+                        class="p-4 border border-t-borderColor flex justify-between items-center"
+                    >
+                        <h5 class="text-xs font-bold text-colorMain">
+                            Institucional
+                        </h5>
+                        <i
+                            data-lucide="chevron-down"
+                            class="w-6 h-6 text-colorPromo"
+                        ></i>
+                    </div>
+
+                    <div
+                        class="p-4 border border-t-borderColor flex justify-between items-center"
+                    >
+                        <h5 class="text-xs font-bold text-colorMain">
+                            Central de ajuda
+                        </h5>
+                        <i
+                            data-lucide="chevron-down"
+                            class="w-6 h-6 text-colorPromo"
+                        ></i>
+                    </div>
+
+                    <div
+                        class="p-4 border border-t-borderColor flex justify-between items-center"
+                    >
+                        <h5 class="text-xs font-bold text-colorMain">
+                            Atendimento
+                        </h5>
+                        <i
+                            data-lucide="chevron-down"
+                            class="w-6 h-6 text-colorPromo"
+                        ></i>
+                    </div>
+                </div>
+
+                <!-- Links Visivel somente no PC -->
+                <div class="hidden 2xl:flex w-full justify-around">
+                    <!-- Institucional -->
+                    <div>
+                        <h4 class="text-xs font-bold text-colorMain">
+                            Institucional
+                        </h4>
+                        <h5 class="text-sm font-normal text-[#303030] mt-4">
+                            <a href="#">Sobre Nós</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Nossas Lojas</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Privacidade e Segurança</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Termos e Condições</a>
+                        </h5>
+                    </div>
+
+                    <!-- Central de ajuda -->
+                    <div>
+                        <h4 class="text-xs font-bold text-colorMain">
+                            Central de ajuda
+                        </h4>
+                        <h5 class="text-sm font-normal text-[#303030] mt-4">
+                            <a href="#">Fale Conosco</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Frete e Entrega</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Trocas e Devoluções</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">Formas de Pagamento</a>
+                        </h5>
+                        <h5 class="text-sm font-normal text-[#303030] mt-3">
+                            <a href="#">FAQ</a>
+                        </h5>
+                    </div>
+
+                    <!-- Atendimento -->
+                    <div>
+                        <h4 class="text-xs font-bold text-colorMain">
+                            Atendimento
+                        </h4>
+                        <h5 class="text-sm font-bold text-[#303030] mt-4">
+                            Telefone:
+                            <span class="font-normal">(00) 1234-5678</span>
+                        </h5>
+                        <h5 class="text-sm font-bold text-[#303030] mt-4">
+                            E-mail:
+                            <span class="font-normal"
+                                >exemplo@exemplo.com.br</span
+                            >
+                        </h5>
+                        <h5
+                            class="text-sm font-bold text-[#303030] mt-4 flex flex-col"
+                        >
+                            Horário de atendimento:
+                            <span class="font-normal"
+                                >Segunda a Sábado: 07h00 às 23h00</span
+                            >
+                            <span class="font-normal"
+                                >Domingos e Feriados: 07h00 às 21h00</span
+                            >
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icons Cards -->
+            <div
+                class="flex flex-col items-center mt-12 2xl:flex-row 2xl:justify-center pb-10"
+            >
+                <!-- Icons Top -->
+                <div class="flex gap-x-5">
+                    <img src="./src/images/amex.svg" alt="Icon Amex" />
+                    <img
+                        src="./src/images/mastercard.svg"
+                        alt="Icon Mastercard"
+                    />
+                    <img src="./src/images/visa.svg" alt="Icon Visa" />
+                    <img
+                        src="./src/images/hipercard.svg"
+                        alt="Icon Hipercard"
+                    />
+                    <img src="./src/images/elo.svg" alt="Icon Elo" />
+                </div>
+
+                <!-- Icons Bottom -->
+                <div class="flex gap-x-5 mt-5 2xl:mt-0 2xl:ml-5">
+                    <img
+                        src="./src/images/b.svg"
+                        alt="Icon Diners Club International"
+                    />
+                    <img src="./src/images/paypal.svg" alt="Icon PayPal" />
+                    <img src="./src/images/pix.svg" alt="Icon Pix" />
+                    <img src="./src/images/boleto.svg" alt="Icon Boleto" />
+                </div>
+            </div>
+
+            <!-- Section Partnerships -->
+            <div class="bg-[#fff] pt-10 pb-4 px-4 py-10">
+                <div class="2xl:w-full 2xl:flex 2xl:justify-center">
+                    <p
+                        class="text-sm font-normal text-[#303030] text-center 2xl:w-[30%]"
+                    >
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        dolore magna aliquam erat volutpat. Ut wisi enim ad
+                        minim veniam, quis nostrud exerci.
+                    </p>
+                </div>
+
+                <!-- Icons Partnerships -->
+                <div class="flex items-center justify-center gap-x-6 mt-10">
+                    <img src="./src/images/encrypt.svg" alt="Icon Encrypt" />
+                    <img src="./src/images/vtex-pci.svg" alt="Icon Vtex Pci" />
+
+                    <div class="h-4 w-[1px] bg-[#F5F5F5]"></div>
+
+                    <img src="./src/images/avanti.svg" alt="Icon Avanti" />
+                    <img src="./src/images/VTEX_Logo.svg" alt="Icon Vtex" />
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Lucide Icons -->
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>
