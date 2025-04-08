@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- Header -->
-        <header class="w-full">
+        <header class="w-full relative">
             <!-- Linha Azul do primeiro pedido -->
             <div class="w-full bg-blueBelt py-1 px-5">
                 <p class="text-sm text-[#fff] font-bold text-center">
@@ -35,12 +35,12 @@
                 class="w-full py-5 px-4 grid grid-cols-[auto,1fr,auto] grid-rows-2 2xl:px-96 2xl:flex 2xl:items-center 2xl:justify-between"
             >
                 <!-- Menu -->
-                <div class="md:hidden cursor-pointer">
+                <div class="iconMenuMobile md:hidden cursor-pointer">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </div>
 
-                <!-- Logo -->
-                <div class="place-items-center cursor-pointer">
+                <!-- Logo  -->
+                <div class="cursor-pointer justify-self-center">
                     <img
                         src="./src/images/Avanti Logo.svg"
                         alt="Logo Avanti"
@@ -93,6 +93,515 @@
                     >
                         <i data-lucide="search" class="w-6 h-6"></i>
                     </button>
+                </div>
+            </div>
+
+            <!-- Navegation Visivel somente para Celular -->
+            <div
+                class="displayMenuMobile hidden py-5 px-4 bg-[#fff] w-full h-screen absolute inset-0 z-[999]"
+            >
+                <div class="flex justify-between">
+                    <img src="./src/images/Avanti Logo.svg" alt="Logo Avanti" />
+
+                    <i data-lucide="x" class="w-6 h-6 iconMenuMobileClose"></i>
+                </div>
+
+                <div class="mt-8">
+                    <nav class="text-colorMain">
+                        <div>
+                            <ul>
+                                <!-- Menu Todas as Categorias -->
+                                <li class="overflow-x-hidden">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <button
+                                            class="btn flex justify-between items-center w-full"
+                                        >
+                                            Todas as categorias
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5 iconSetaRight"
+                                            ></i>
+                                            <i
+                                                data-lucide="chevron-left"
+                                                class="w-5 h-5 hidden iconSetaLeft"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="subMenu hidden mt-4 flex-col gap-y-4"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 1
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 2
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 3
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 4
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 5
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 6
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 7
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 8
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                    </div>
+                                </li>
+
+                                <!-- Departamentos 1 -->
+                                <li class="overflow-x-hidden mt-8">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <button
+                                            class="btn flex justify-between items-center w-full"
+                                        >
+                                            Departamento
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5 iconSetaRight"
+                                            ></i>
+                                            <i
+                                                data-lucide="chevron-left"
+                                                class="w-5 h-5 hidden iconSetaLeft"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="subMenu hidden mt-4 flex-col gap-y-4"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 1
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 2
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 3
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 4
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 5
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 6
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 7
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 8
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                    </div>
+                                </li>
+
+                                <!-- Departamentos 2 -->
+                                <li class="overflow-x-hidden mt-8">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <button
+                                            class="btn flex justify-between items-center w-full"
+                                        >
+                                            Departamento
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5 iconSetaRight"
+                                            ></i>
+                                            <i
+                                                data-lucide="chevron-left"
+                                                class="w-5 h-5 hidden iconSetaLeft"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="subMenu hidden mt-4 flex-col gap-y-4"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 1
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 2
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 3
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 4
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 5
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 6
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 7
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 8
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                    </div>
+                                </li>
+
+                                <!-- Departamentos 3 -->
+                                <li class="overflow-x-hidden mt-8">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <button
+                                            class="btn flex justify-between items-center w-full"
+                                        >
+                                            Departamento
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5 iconSetaRight"
+                                            ></i>
+                                            <i
+                                                data-lucide="chevron-left"
+                                                class="w-5 h-5 hidden iconSetaLeft"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="subMenu hidden mt-4 flex-col gap-y-4"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 1
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 2
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 3
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 4
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 5
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 6
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 7
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 8
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                    </div>
+                                </li>
+
+                                <!-- Departamentos 4 -->
+                                <li class="overflow-x-hidden mt-8">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <button
+                                            class="btn flex justify-between items-center w-full"
+                                        >
+                                            Departamento
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5 iconSetaRight"
+                                            ></i>
+                                            <i
+                                                data-lucide="chevron-left"
+                                                class="w-5 h-5 hidden iconSetaLeft"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <div
+                                        class="subMenu hidden mt-4 flex-col gap-y-4"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 1
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 2
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 3
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 4
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 5
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 6
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 7
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            href="#"
+                                            class="flex justify-between items-center"
+                                            >Categoria 8
+                                            <i
+                                                data-lucide="chevron-right"
+                                                class="w-5 h-5"
+                                            ></i
+                                        ></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
 
@@ -530,8 +1039,8 @@
                     </div>
 
                     <!-- Setas de navegação -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-button-next next-mobile"></div>
+                    <div class="swiper-button-prev prev-mobile"></div> -->
 
                     <!-- Dots de navegação -->
                     <div class="swiper-pagination absolute top-0"></div>
@@ -860,8 +1369,14 @@
                 </div>
 
                 <!-- Navegação -->
-                <div class="swiper-button-next swiperTwoRight"></div>
-                <div class="swiper-button-prev swiperTwoLeft"></div>
+                <div class="hidden 2xl:block">
+                    <div class="swiper-button-prev">
+                        <i data-lucide="arrow-left" class="iconLeft"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i data-lucide="arrow-right" class="iconRight"></i>
+                    </div>
+                </div>
 
                 <!-- Dots de navegação -->
                 <div class="swiper-pagination absolute bottom-0"></div>
@@ -1363,8 +1878,12 @@
                 </div>
 
                 <!-- Navegação -->
-                <div class="swiper-button-next swiperTwoRight"></div>
-                <div class="swiper-button-prev swiperTwoLeft"></div>
+                <div class="swiper-button-prev">
+                    <i data-lucide="arrow-left" class="iconLeft"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i data-lucide="arrow-right" class="iconRight"></i>
+                </div>
 
                 <!-- Dots de navegação -->
                 <div class="swiper-pagination absolute bottom-0"></div>

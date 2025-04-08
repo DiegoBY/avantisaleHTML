@@ -1,10 +1,8 @@
+// Swiper Banner Principal
 const swiperOne = new Swiper('.swiperOne', {
     slidesPerView: 1,
     spaceBetween: 10,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -12,17 +10,21 @@ const swiperOne = new Swiper('.swiperOne', {
     loop: true,
 });
 
+// Swiper Banner Lançamentos
 const swiperTwo = new Swiper('.swiperTwo', {
     slidesPerView: 2,
     spaceBetween: 5,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
     loop: true,
     breakpoints: {
         640: {
@@ -163,3 +165,113 @@ const closedLink = () => {
 
 linkDepartamento.addEventListener('mouseenter', openLink);
 divDepartamento.addEventListener('mouseleave', closedLink);
+
+// Menu Mobile
+const displayMenuMobile = document.querySelector('.displayMenuMobile');
+const iconMenuMobile = document.querySelector('.iconMenuMobile');
+const iconMenuMobileClose = document.querySelector('.iconMenuMobileClose');
+const body = document.querySelector('body');
+
+let isOpenMenu = false;
+
+const openMenu = () => {
+    if (!isOpenMenu) {
+        isOpenMenu = true;
+
+        displayMenuMobile.classList.remove(
+            'hidden',
+            'animate-menuCategoriaClose'
+        );
+        displayMenuMobile.classList.add('block', 'animate-menuCategoria');
+        body.style.overflow = 'hidden';
+    }
+};
+
+const closeMenu = () => {
+    if (isOpenMenu) {
+        isOpenMenu = false;
+
+        displayMenuMobile.classList.remove('animate-menuCategoria');
+        displayMenuMobile.classList.add('animate-menuCategoriaClose');
+
+        setTimeout(() => {
+            displayMenuMobile.classList.remove(
+                'block',
+                'animate-menuCategoriaClose'
+            );
+            displayMenuMobile.classList.add('hidden');
+            body.style.overflow = 'auto';
+        }, 500);
+    }
+};
+iconMenuMobile.addEventListener('click', openMenu);
+iconMenuMobileClose.addEventListener('click', closeMenu);
+
+// Menu TODAS AS CATEGORIAS
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const currentLi = btn.closest('li');
+        const subMenu = currentLi.querySelector('.subMenu');
+        const iconSetaRight = btn.querySelectorAll('.iconSetaRight');
+        const iconSetaLeft = btn.querySelectorAll('.iconSetaLeft');
+        const isOpen = subMenu.classList.contains('flex');
+        const allLis = document.querySelectorAll('ul > li');
+
+        document.querySelectorAll('.subMenu').forEach((menu) => {
+            if (menu !== subMenu && menu.classList.contains('flex')) {
+                menu.classList.remove('flex', 'animate-menuCategoria');
+                menu.classList.add('animate-menuCategoriaClose');
+
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('animate-menuCategoriaClose');
+                }, 500);
+            }
+        });
+
+        document.querySelectorAll('.btn').forEach((b) => {
+            b.classList.remove('text-[#005CFF]');
+            b.querySelectorAll('.iconSetaRight').forEach((i) =>
+                i.classList.remove('hidden')
+            );
+            b.querySelectorAll('.iconSetaLeft').forEach((i) =>
+                i.classList.add('hidden')
+            );
+        });
+
+        if (!isOpen) {
+            allLis.forEach((li) => {
+                if (li !== currentLi) {
+                    li.classList.add('hidden');
+                }
+            });
+
+            subMenu.classList.remove('hidden', 'animate-menuCategoriaClose');
+            subMenu.classList.add('flex', 'animate-menuCategoria');
+
+            iconSetaRight.forEach((i) => i.classList.add('hidden'));
+            iconSetaLeft.forEach((i) => i.classList.remove('hidden'));
+
+            btn.classList.add('text-[#005CFF]');
+        } else {
+            subMenu.classList.remove('animate-menuCategoria');
+            subMenu.classList.add('animate-menuCategoriaClose');
+
+            iconSetaRight.forEach((i) => i.classList.remove('hidden'));
+            iconSetaLeft.forEach((i) => i.classList.add('hidden'));
+
+            setTimeout(() => {
+                subMenu.classList.remove('flex', 'animate-menuCategoriaClose');
+                subMenu.classList.add('hidden');
+
+                allLis.forEach((li) => {
+                    li.classList.remove('hidden');
+                });
+
+                btn.classList.remove('text-[#005CFF]');
+            }, 500);
+        }
+    });
+});

@@ -13,10 +13,51 @@
 
 
 
+
 body {
     width: 100vw;
     font-family: 'Nunito Sans', serif;
     overflow-x: hidden !important;
     font-weight: 400;
     background: #fff;
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none !important;
+}
+
+.swiper-button-prev .iconLeft,
+.swiper-button-next .iconRight {
+    width: 12px;
+    height: 12px;
+    color: #005CFF !important;
+
+}
+
+.swiperTwo {
+
+    position: relative !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: #fff !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 100% !important;
+    border: 1px solid #005CFF !important;
+
+}
+
+.swiper-button-prev {
+    left: 2.5rem !important;
+}
+
+.swiper-button-next {
+    right: 1.6rem !important;
 }
