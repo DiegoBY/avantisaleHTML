@@ -10,4 +10,8 @@ O que foi alterado | adicionado?
 
 . Removidas as setas de navegação (Prev e Next) dos carrosséis na versão mobile, conforme especificado no layout do Figma.
 
+. Removidas as setas de navegação (Prev e Next) do carrossel do banner principal na versão desktop, seguindo o layout do Figma, que não incluía esses elementos.
+
+. Setas de navegação (Prev e Next) dos carrosséis de compra ajustadas para corresponder ao layout do Figma. Antes estavam diferentes, agora seguem o padrão visual correto.
+
 Site no ar: https://diegoby.github.io/avantisaleHTML/
