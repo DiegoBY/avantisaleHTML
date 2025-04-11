@@ -1,17 +1,48 @@
-Projeto Avanti Sale feito em HTML | Tailwindcss | Javascript. Com responsividade para Celular e PC.
 
-Atualização no projeto 08/04/2025
+# 🛍️ Projeto Avanti Sale
 
-O que foi alterado | adicionado?
+**Avanti Sale** é um projeto desenvolvido com **HTML**, **TailwindCSS** e **JavaScript**, focado em responsividade para **celular e desktop**.  
+Design baseado em layout criado no **Figma**.
 
-. Menu mobile implementado. Obs: Como o layout no Figma não incluía uma versão mobile, desenvolvi uma adaptação utilizando lógica padrão de menus responsivos.
+---
 
-. Ajustada a posição da logo da AVANTI. Antes ela ficava ao lado do menu mobile; agora está centralizada, conforme o layout original do Figma.
+## 📅 Última atualização: `08/04/2025`
 
-. Removidas as setas de navegação (Prev e Next) dos carrosséis na versão mobile, conforme especificado no layout do Figma.
+---
 
-. Removidas as setas de navegação (Prev e Next) do carrossel do banner principal na versão desktop, seguindo o layout do Figma, que não incluía esses elementos.
+## ✨ O que foi alterado / adicionado?
 
-. Setas de navegação (Prev e Next) dos carrosséis de compra ajustadas para corresponder ao layout do Figma. Antes estavam diferentes, agora seguem o padrão visual correto.
+### 📱 Menu Mobile  
+- Implementado menu responsivo.  
+  > ⚠️ *Obs:* O layout no Figma não incluía versão mobile, então desenvolvi uma adaptação utilizando lógica padrão para menus.
 
-Site no ar: https://diegoby.github.io/avantisaleHTML/
+---
+
+### 🎯 Logo AVANTI  
+- Posição da logo ajustada.  
+  Antes, ela ficava ao lado do menu mobile; agora está **centralizada**, conforme o layout original do Figma.
+
+---
+
+### ❌ Setas de navegação removidas  
+- **Versão mobile:**  
+  Removidas as setas (Prev e Next) dos carrosséis, como indicado no layout do Figma.
+
+- **Versão desktop:**  
+  Removidas as setas do carrossel do **banner principal**, também seguindo o layout, que não incluía esses elementos.
+
+---
+
+### ✅ Setas ajustadas nos carrosséis de compra  
+- As setas (Prev e Next) foram ajustadas para corresponder ao **visual correto do Figma**.  
+  Antes, estavam desalinhadas ou diferentes do padrão.
+
+---
+
+## 🌐 Acesse o projeto online:
+
+👉 [**Clique aqui para ver o site no ar**](https://diegoby.github.io/avantisaleHTML/)  
+ou cole no navegador:  
+`https://diegoby.github.io/avantisaleHTML/`
+
+---
