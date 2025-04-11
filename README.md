@@ -1,4 +1,4 @@
-projeto Avanti Sale feito em HTML | Tailwindcss | Javascript. Com responsividade para Celular e PC.
+Projeto Avanti Sale feito em HTML | Tailwindcss | Javascript. Com responsividade para Celular e PC.
 
 Atualização no projeto 08/04/2025
 
