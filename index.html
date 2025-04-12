@@ -2196,40 +2196,92 @@
 
                 <!-- Links Visivel somente no Mobile -->
                 <div class="2xl:hidden">
-                    <div
-                        class="p-4 border border-t-borderColor flex justify-between items-center"
-                    >
-                        <h5 class="text-xs font-bold text-colorMain">
-                            Institucional
-                        </h5>
-                        <i
-                            data-lucide="chevron-down"
-                            class="w-6 h-6 text-colorPromo"
-                        ></i>
+                    <!-- Menu Acordeon Institucional -->
+                    <div>
+                        <div
+                            class="border-t border-t-borderColor p-4 flex justify-between items-center btnAcordeon"
+                        >
+                            <h5 class="text-xs font-bold text-colorMain">
+                                Institucional
+                            </h5>
+                            <i
+                                data-lucide="chevron-down"
+                                class="w-6 h-6 text-colorPromo iconMenuAcordeon"
+                            ></i>
+                        </div>
+
+                        <div
+                            class="menuAcordeon px-4 pb-4 text-[#303030] text-sm font-normal hidden flex-col gap-y-1"
+                        >
+                            <h5>Sobre nós</h5>
+                            <h5>Nossas Lojas</h5>
+                            <h5>Privacidade e Segurança</h5>
+                            <h5>Termos e condições</h5>
+                        </div>
                     </div>
 
-                    <div
-                        class="p-4 border border-t-borderColor flex justify-between items-center"
-                    >
-                        <h5 class="text-xs font-bold text-colorMain">
-                            Central de ajuda
-                        </h5>
-                        <i
-                            data-lucide="chevron-down"
-                            class="w-6 h-6 text-colorPromo"
-                        ></i>
+                    <!-- Menu Acordeon Central de Ajuda -->
+                    <div>
+                        <div
+                            class="p-4 border-t border-t-borderColor flex justify-between items-center btnAcordeon"
+                        >
+                            <h5 class="text-xs font-bold text-colorMain">
+                                Central de ajuda
+                            </h5>
+                            <i
+                                data-lucide="chevron-down"
+                                class="w-6 h-6 text-colorPromo iconMenuAcordeon"
+                            ></i>
+                        </div>
+
+                        <div
+                            class="menuAcordeon px-4 pb-4 text-[#303030] text-sm font-normal hidden flex-col gap-y-1"
+                        >
+                            <h5>Fale Conosco</h5>
+                            <h5>Frete e Entrega</h5>
+                            <h5>Trocas e Devoluções</h5>
+                            <h5>Formas de Pagamento</h5>
+                            <h5>FAQ</h5>
+                        </div>
                     </div>
 
-                    <div
-                        class="p-4 border border-t-borderColor flex justify-between items-center"
-                    >
-                        <h5 class="text-xs font-bold text-colorMain">
-                            Atendimento
-                        </h5>
-                        <i
-                            data-lucide="chevron-down"
-                            class="w-6 h-6 text-colorPromo"
-                        ></i>
+                    <!-- Menu Acordeon Atendimento -->
+                    <div>
+                        <div
+                            class="p-4 border-t border-t-borderColor flex justify-between items-center btnAcordeon"
+                        >
+                            <h5 class="text-xs font-bold text-colorMain">
+                                Atendimento
+                            </h5>
+                            <i
+                                data-lucide="chevron-down"
+                                class="w-6 h-6 text-colorPromo iconMenuAcordeon"
+                            ></i>
+                        </div>
+
+                        <div
+                            class="menuAcordeon px-4 pb-4 text-[#303030] text-xs font-bold hidden flex-col gap-y-1"
+                        >
+                            <h5>
+                                Telefone:
+                                <span class="text-sm font-normal"
+                                    >(00) 1234-5678</span
+                                >
+                            </h5>
+                            <h5>
+                                E-mail:
+                                <span class="text-sm font-normal"
+                                    >exemplo@exemplo.com.br</span
+                                >
+                            </h5>
+                            <h5>Horário de atendimento:</h5>
+                            <span class="text-sm font-normal"
+                                >Segunda a Sábado: 07h00 às 23h00</span
+                            >
+                            <span class="text-sm font-normal"
+                                >Domingos e Feriados: 07h00 às 21h00</span
+                            >
+                        </div>
                     </div>
                 </div>
 
@@ -2308,7 +2360,7 @@
 
             <!-- Icons Cards -->
             <div
-                class="flex flex-col items-center mt-12 2xl:flex-row 2xl:justify-center pb-10"
+                class="border-t border-t-borderColor 2xl:border-0 py-10 flex flex-col items-center 2xl:flex-row 2xl:justify-center"
             >
                 <!-- Icons Top -->
                 <div class="flex gap-x-5">

@@ -275,3 +275,33 @@ buttons.forEach((btn) => {
         }
     });
 });
+
+// Menus Acordeon Footer
+const btnAcordeons = document.querySelectorAll('.btnAcordeon');
+
+btnAcordeons.forEach((btnAcordeon, index) => {
+    const menuAcordeon = document.querySelectorAll('.menuAcordeon')[index];
+    const iconMenuAcordeon = btnAcordeon.querySelector('.iconMenuAcordeon');
+
+    let menuOpen = false;
+
+    const toggleMenu = () => {
+        if (menuOpen) {
+            menuAcordeon.classList.remove('flex');
+            menuAcordeon.classList.add('hidden');
+        } else {
+            menuAcordeon.classList.remove('hidden');
+            menuAcordeon.classList.add('flex');
+        }
+
+        if (menuOpen) {
+            iconMenuAcordeon.style.transform = 'rotate(0deg)';
+        } else {
+            iconMenuAcordeon.style.transform = 'rotate(180deg)';
+        }
+
+        menuOpen = !menuOpen;
+    };
+
+    btnAcordeon.addEventListener('click', toggleMenu);
+});
